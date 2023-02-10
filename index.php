@@ -4,10 +4,15 @@ $redis = new Redis();
  
 $redis->connect('127.0.0.1',6379);
 
+$v="126000,1000";
+
+$redis->rpush("mylist",$v);
+
+
 $shuliang = $redis->llen('mylist');
 
 
-if ($shuliang>0) {
+if ($shuliang=1) {
 
   //list类型出队操作
  
