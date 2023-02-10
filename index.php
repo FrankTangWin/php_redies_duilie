@@ -5,10 +5,10 @@ $redis = new Redis();
 $redis->connect('127.0.0.1',6379);
 
 
-redis_kz("1600000,02123",5);
+redis_kz("1600000,02123");
 
 
-function redis_kz($bianliang,$pd)
+function redis_kz($bianliang)
 {
  global $redis;
 
