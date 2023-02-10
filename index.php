@@ -4,9 +4,15 @@ $redis = new Redis();
  
 $redis->connect('127.0.0.1',6379);
 
-$v="126000,1000";
 
-$redis->rpush("mylist",$v);
+redis_kz("1600000,02123",5);
+
+
+function redis_kz($bianliang,$pd)
+{
+ global $redis;
+
+$redis->rpush("mylist",$bianliang);
 
 
 $shuliang = $redis->llen('mylist');
@@ -42,6 +48,9 @@ echo $hou."<br>";
   
 }
 echo $shuliang;
+
+}
+
 
  
 ?>
